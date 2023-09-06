@@ -14,6 +14,8 @@ const quizSection = document.querySelector(".quiz-section");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 const tryAgainBtn = document.querySelector(".tryAgain-btn");
+const tryAgainBtn2 = document.querySelector(".tryAgain-btn2");
+const tryAgainBtn3 = document.querySelector(".tryAgain-btn3");
 const goHomeBtn = document.querySelector(".goHome-btn");
 const wrapper = document.querySelector(".wrapper");
 const registerLink = document.querySelector(".register-link");
@@ -100,24 +102,53 @@ tryAgainBtn.onclick = () => {
   questionCounter(questionNumb);
   showQuestions(questionCount);
 };
+tryAgainBtn2.onclick = () => {
+  quizBox.classList.add("active");
+  nextBtn2.classList.remove("active");
+  resultBox.classList.remove("active");
+  questionCount = 0;
+  questionNumb = 1;
+  userScore = 0;
+  headerScore2();
+  questionCounter2(questionNumb);
+  showQuestions2(questionCount);
+};
+tryAgainBtn3.onclick = () => {
+  quizBox.classList.add("active");
+  nextBtn3.classList.remove("active");
+  resultBox.classList.remove("active");
+  questionCount = 0;
+  questionNumb = 1;
+  userScore = 0;
+  headerScore3();
+  questionCounter3(questionNumb);
+  showQuestions3(questionCount);
+};
 
 goHomeBtn.onclick = () => {
   nextBtn.style.display = "block";
   nextBtn2.style.display = "block";
   nextBtn3.style.display = "block";
+  tryAgainBtn.style.display = "block";
+  tryAgainBtn2.style.display = "block";
+  tryAgainBtn3.style.display = "block";
   quizSection.classList.remove("active");
   nextBtn.classList.remove("active");
   nextBtn2.classList.remove("active");
+  nextBtn3.classList.remove("active");
   resultBox.classList.remove("active");
   questionCount = 0;
   questionNumb = 1;
   userScore = 0;
   headerScore();
   headerScore2();
+  headerScore3();
   questionCounter(questionNumb);
   questionCounter2(questionNumb);
+  questionCounter3(questionNumb);
   showQuestions(questionCount);
   showQuestions2(questionCount);
+  showQuestions3(questionCount);
 };
 // the variable were here
 let questionCount = 0;
@@ -128,19 +159,23 @@ const nextBtn = document.querySelector(".next-btn");
 const nextBtn2 = document.querySelector(".next-btn2");
 const nextBtn3 = document.querySelector(".next-btn3");
 nextBtn.onclick = () => {
+  tryAgainBtn2.style.display = "none";
+  tryAgainBtn3.style.display = "none";
   if (questionCount < questions.length - 1) {
     questionNumb++;
     questionCounter(questionNumb);
     nextBtn.classList.remove("active");
     questionCount++;
     showQuestions(questionCount);
-    nex;
+    // nex;
   } else {
     showResultBox();
   }
 };
 
 nextBtn2.onclick = () => {
+  tryAgainBtn.style.display = "none";
+  tryAgainBtn3.style.display = "none";
   if (questionCount < cssQuestions.length - 1) {
     questionNumb++;
     questionCounter2(questionNumb);
@@ -153,6 +188,8 @@ nextBtn2.onclick = () => {
 };
 // TODO: REMEMBER TO EDIT THIS
 nextBtn3.onclick = () => {
+  tryAgainBtn.style.display = "none";
+  tryAgainBtn2.style.display = "none";
   if (questionCount < javascriptQuestions.length - 1) {
     questionNumb++;
     questionCounter3(questionNumb);
