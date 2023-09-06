@@ -55,7 +55,7 @@ const cssQuestions = [
 ];
 
 // To get a random CSS question, you can use the following code:
-const randomCssQuestion =
-  cssQuestions[Math.floor(Math.random() * cssQuestions.length)];
+// const randomCssQuestion =
+//   cssQuestions[Math.floor(Math.random() * cssQuestions.length)];
 
-console.log(randomCssQuestion);
+// console.log(randomCssQuestion);

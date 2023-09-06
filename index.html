@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- TODO: remember to add icon -->
-    <link rel="icon" href="background.jpg" />
+    <link rel="icon" href="quiz icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Website</title>
     <link rel="stylesheet" href="style.css" />
@@ -12,13 +12,17 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
     <main class="main">
       <header class="header">
         <!-- TODO: adding logo img here -->
-        <a href="#" class="logo">Quiz.</a>
+        <a href="#" class="logo"><img src="quiz icon.png" alt="" style="width: 85px; height: auto;"></a>
         <input type="checkbox" id="check" />
         <label for="check" class="icons">
           <!-- TODO: remember to recomment -->
@@ -66,13 +70,13 @@
                     <!-- <i class='bx bxl-gmail' ></i>
                     <i class='bx bxl-facebook' ></i> -->
                   </span>
-                  <input type="email" required>
+                  <input type="email" required autocomplete="off">
                   <label>Email</label>
                 </div>
 
                 <div class="input-box">
                   <span class="icon"><i class='bx bx-lock-alt' ></i></span>
-                  <input type="password" required>
+                  <input type="password" required autocomplete="off">
                   <label>Password</label>
                 </div>
                 <div class="remember-forgot">
@@ -141,7 +145,7 @@
       <div class="container">
         <section class="quiz-section">
           <div class="quiz-box">
-            <h1>Omar's Quiz</h1>
+            <h1>Web dev. Quiz</h1>
             <div class="quiz-header">
               <!-- TODO: remember to edit this -->
               <span>Quiz Website Tutorial</span>
@@ -165,7 +169,9 @@
             <div class="quiz-footer">
               <!-- TODO: gotta edit this -->
               <span class="question-total">1 of 5 Questions</span>
-              <button class="next-btn">Next</button>
+              <button class="next-btn btns">Next</button>
+              <button class="next-btn2 btns2">Next</button>
+              <button class="next-btn3 btns3">Next</button>
             </div>
           </div>
           <div class="result-box">
@@ -182,14 +188,16 @@
             </div>
           </div>
         </section>
+
         <section class="home">
           <div class="home-content">
             <h1>Quiz Website</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              eligendi, facere quaerat minus, qui molestias praesentium est,
-              fuga libero earum labore beatae ipsa itaque non illum quidem
-              numquam totam nisi.
+              A quiz website is a platform or website that provides 
+              quizzes on various topics or subjects. The primary purpose 
+              of a quiz website is to entertain, educate, or engage users 
+              by allowing them to answer questions on specific subjects and 
+              receive scores or feedback based on their responses.
             </p>
             <button class="start-btn">Start Quiz</button>
           </div>
@@ -197,7 +205,8 @@
       </div>
     </main>
     <div class="popup-info">
-      <h2>Quiz Guide</h2>
+      <!-- <h2>Quiz Guide</h2>
+  
       <span class="info">1. Lorem ipsum, dolor sit amet consectetur.</span>
       <span class="info"
         >2. Lorem ipsum, dolor sit amet consectetur adipisicing.</span
@@ -213,10 +222,93 @@
       <div class="btn-group">
         <button class="info-btn exit-button">Exit Quiz</button>
         <a href="#" class="info-btn continue-btn">Continue</a>
+      </div> -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+                <h2>Html Quiz Guide</h2>
+      
+                <span class="info">1. Basic HTML Knowledge.</span>
+                <span class="info">2. Study Resources: Review HTML documentation .</span>
+                <span class="info">3. The wrong answer is: red</span>
+                <span class="info">4. The correct answer is: green</span>
+                <span class="info">5. Click to continue to the quiz</span>
+
+                <div class="btn-group">
+                  <button class="info-btn exit-button">Exit Quiz</button>
+                  <a href="#" class="info-btn continue-btn">Continue</a>
+                </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>CSS Quiz Guide</h2>
+      
+                <span class="info">1. Fundamental: Understand core CSS concepts.</span>
+                <span class="info">2. Selectors Mastery: types and usage.</span>
+                <span class="info">3. The wrong answer is: red</span>
+                <span class="info">4. The correct answer is: green</span>
+                <span class="info">5. Click to continue to the quiz</span>
+
+                <div class="btn-group">
+                  <button class="info-btn exit-button2">Exit Quiz</button>
+                  <a href="#" class="info-btn continue-btn2">Continue</a>
+                </div>
+          </div>
+          <div class="swiper-slide">
+            <h2>Js Quiz Guide</h2>
+      
+            <span class="info">1.Better concept of js .</span><br>
+            <span class="info">2. using variable and consoles.</span>
+            <span class="info">3. The wrong answer is: red</span>
+                <span class="info">4. The correct answer is: green</span>
+                <span class="info">5. Click to continue to the quiz</span>
+
+            <div class="btn-group">
+              <button class="info-btn exit-button3">Exit Quiz</button>
+              <a href="#" class="info-btn continue-btn3">Continue</a>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+  
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+  
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        // direction: "vertical",
+        // loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
     </div>
 
     <script src="questions.js"></script>
+    <script src="CSSquestions.js"></script>
+    <script src="JAVASCRIPTquestions.js"></script>
     <script defer src="script.js"></script>
   </body>
 </html>
