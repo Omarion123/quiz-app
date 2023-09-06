@@ -1,25 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz app</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="app">
-        <h1>Simple quiz</h1>
-        <div class="quiz">
-            <h2 id="question">Question goes here</h2>
-            <div id="answer-buttons">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
-            <button id="next-btn">Next</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- TODO: remember to add icon -->
+    <link rel="icon" href="background.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="main">
+      <header class="header">
+        <!-- TODO: adding logo img here -->
+        <a href="#" class="logo">Quiz.</a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+          <!-- TODO: remember to recomment -->
+          <i class="bx bx-menu" id="menu-icon"></i>
+          <!-- <img src="/menu-regular-24.png" class="imgs" id="menu-icon" /> -->
+          <i class="bx bx-x" id="close-icon"></i>
+          <!-- <img src="x2.png" class="imgs" id="close-icon" /> -->
+        </label>
+        <!-- <nav class="navbar">
+          <a href="#" class="active">Home</a>
+          <a href="#">About</a>
+          <a href="#">Service</a>
+          <a href="#">Contact</a>
+          <a href="#">Contact</a>
+        </nav> -->
+        <div class="navbar">
+            <!-- <a href="#" class="active">Home</a> -->
+            <a href="#" style="--i: 0" class="active">Home</a>
+            <a href="#" style="--i: 1">About</a>
+            <a href="#" style="--i: 2">Service</a>
+            <a href="#" style="--i: 3">Contact</a>
+            <a href="#" style="--i: 3"><button class="btnLogin-popup">Login</button></a>
+            <!-- TODO: remember that this is button -->
+            <!-- <button href="#" style="--i: 3" class="btnLogin-popup">Login</button> -->
+          </div>
         </div>
+      </header>
+
+      <section class="section">
+        <div class="wrapper">
+          <span class="icon-close">
+            <i class='bx bx-x' ></i>
+          </span>
+          <div class="logreg-box">
+            <!-- Login form -->
+            <div class="form-box login">
+              <div class="logreg-title">
+                <h2>Login</h2>
+                <p>Please Login in to use the platform</p>
+              </div>
+              <form action="#">
+                <div class="input-box">
+                  <span class="icon">
+                    <i class='bx bxs-envelope' ></i>
+                    <!-- <i class='bx bxl-gmail' ></i>
+                    <i class='bx bxl-facebook' ></i> -->
+                  </span>
+                  <input type="email" required>
+                  <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                  <span class="icon"><i class='bx bx-lock-alt' ></i></span>
+                  <input type="password" required>
+                  <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                  <label><input type="checkbox">Remember me</label>
+                  <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="logreg-link">
+                  <p>Don't have an account? <a href="#" 
+                    class="register-link">Register</a></p>
+                </div>
+              </form>
+            </div>
+
+            <!-- register form -->
+            <div class="form-box register">
+              <div class="logreg-title">
+                <h2>Registration</h2>
+                <p>Please provide the following to verify you identity</p>
+              </div>
+              <form action="#">
+                <div class="input-box">
+                  <span class="icon">
+                    <i class='bx bxs-user'></i>
+                  </span>
+                  <input type="text" required>
+                  <label>full Name</label>
+                </div>
+                <div class="input-box">
+                  <span class="icon">
+                    <i class='bx bxs-envelope' ></i>
+                  </span>
+                  <input type="email" required>
+                  <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                  <span class="icon"><i class='bx bx-lock-alt' ></i></span>
+                  <input type="password" required>
+                  <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                  <label><input type="checkbox">I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="logreg-link">
+                  <p>Already have an account? <a href="#" 
+                    class="login-link">Login</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="media-options">
+            <a href="#">
+              <i class='bx bxl-gmail' ></i>
+              <span>Login with Google</span>
+            </a>
+            <a href="#">
+              <i class='bx bxl-facebook' ></i>
+              <span>Login with Facebook</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <section class="quiz-section">
+          <div class="quiz-box">
+            <h1>Omar's Quiz</h1>
+            <div class="quiz-header">
+              <!-- TODO: remember to edit this -->
+              <span>Quiz Website Tutorial</span>
+              <span class="header-score">Score: 0 / 5</span>
+            </div>
+            <h2 class="question-text">What does HTML stand for?</h2>
+            <div class="option-list">
+              <!-- <div class="option">
+                            <span>A. Hyper Type Multi Language</span>
+                        </div>
+                        <div class="option">
+                            <span>B. Hyper Text Multiple Language</span>
+                        </div>
+                        <div class="option">
+                            <span>C. Hyper Text Markup Language</span>
+                        </div>
+                        <div class="option">
+                            <span>D. Home Text Multi Language</span>
+                        </div>-->
+            </div>
+            <div class="quiz-footer">
+              <!-- TODO: gotta edit this -->
+              <span class="question-total">1 of 5 Questions</span>
+              <button class="next-btn">Next</button>
+            </div>
+          </div>
+          <div class="result-box">
+            <h2>Quiz Result</h2>
+            <div class="percentage-container">
+              <div class="circular-progress">
+                <span class="progress-value">0%</span>
+              </div>
+              <span class="score-text">Your Score 0 out of 5</span>
+            </div>
+            <div class="buttons">
+              <button class="tryAgain-btn">Try Again</button>
+              <button class="goHome-btn">Go To Home</button>
+            </div>
+          </div>
+        </section>
+        <section class="home">
+          <div class="home-content">
+            <h1>Quiz Website</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              eligendi, facere quaerat minus, qui molestias praesentium est,
+              fuga libero earum labore beatae ipsa itaque non illum quidem
+              numquam totam nisi.
+            </p>
+            <button class="start-btn">Start Quiz</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="popup-info">
+      <h2>Quiz Guide</h2>
+      <span class="info">1. Lorem ipsum, dolor sit amet consectetur.</span>
+      <span class="info"
+        >2. Lorem ipsum, dolor sit amet consectetur adipisicing.</span
+      >
+      <span class="info">3. Lorem ipsum, dolor sit amet cons.</span>
+      <span class="info"
+        >4. Lorem ipsum, dolor sit amet consectetur adipisicing.</span
+      >
+      <span class="info"
+        >5. Lorem ipsum, dolor sit amet consectetur adipisicing.</span
+      >
+
+      <div class="btn-group">
+        <button class="info-btn exit-button">Exit Quiz</button>
+        <a href="#" class="info-btn continue-btn">Continue</a>
+      </div>
     </div>
-    <script src="index.js"></script>
-</body>
+
+    <script src="questions.js"></script>
+    <script defer src="script.js"></script>
+  </body>
 </html>
