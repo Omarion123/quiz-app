@@ -46,7 +46,11 @@ function loginFunc(e) {
   // } else {
   //   alert("Please provide correct info!");
   // }
+  const startButton = document.getElementById("start-btn");
+  const loginMessage = document.getElementById("login-message");
   if (fullname === data.email && password === data.password) {
+    startButton.style.display = "block";
+    loginMessage.style.display = "none";
     alert("you have successfully logged in!");
     console.log(data.fullname);
 

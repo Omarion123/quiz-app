@@ -16,13 +16,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
 
   <body>
     <main class="main">
       <header class="header">
         <!-- TODO: adding logo img here -->
-        <a href="#" class="logo"><img src="quiz icon.png" alt="" style="width: 85px; height: auto;"></a>
+        <!-- <a href="#" class="logo"><img src="quiz icon.png" alt="" style="width: 85px; height: auto;"></a> -->
+        <a href="#" class="logo"><img src="omy logo.svg" alt="" style="width: 85px; height: auto;"></a>
         <input type="checkbox" id="check" />
         <label for="check" class="icons">
           <!-- TODO: remember to recomment -->
@@ -205,7 +210,8 @@
               by allowing them to answer questions on specific subjects and 
               receive scores or feedback based on their responses.
             </p>
-            <button class="start-btn">Start Quiz</button>
+            <h2 id="login-message" class="animate__animated animate__fadeInTopRight">Please login to start quiz...</h2>
+            <button class="start-btn" id="start-btn">Start Quiz</button>
           </div>
         </section>
       </div>
