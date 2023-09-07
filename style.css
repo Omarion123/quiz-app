@@ -91,6 +91,10 @@ body {
   font-weight: 500;
   margin-right: 2.5rem;
 }
+
+#username-user {
+  display: none;
+}
 .navbar .btnLogin-popup {
   position: relative;
   background: transparent;
@@ -877,7 +881,7 @@ body {
     transition: 0.3s ease;
   }
   #check:checked ~ .navbar {
-    height: 17.7rem;
+    height: 19.7rem;
   }
   .navbar a {
     display: block;
