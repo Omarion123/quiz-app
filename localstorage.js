@@ -69,6 +69,7 @@ function loginFunc(e) {
     userButton.textContent = "Logout";
     userButton.addEventListener("click", function () {
       // Add a click event listener to the "Logout" button
+      alert("Successfully logged out!!!");
       location.reload(); // Reload the page
     });
     userLink.appendChild(userButton);
