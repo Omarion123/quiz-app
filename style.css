@@ -411,6 +411,11 @@ body {
   color: #ff00c3;
 }
 
+#login-message:hover {
+  animation: bounceIn;
+  animation-duration: 2s;
+}
+
 .home-content .start-btn {
   width: 190px;
   height: 55px;
